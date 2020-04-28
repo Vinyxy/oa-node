@@ -1,10 +1,10 @@
-var express = require ('express');
+var express = require('express');
 var bodyParser = require('body-parser');
 const app = express();
 var mongoose = require('mongoose');
 
 //PERSISTÊNCIA
-mongoose.connect('mongodb+srv://matheus:123@cluster0-pigl8.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser:true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://vinicius:123@cluster0-bxtbr.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //Configuração do server para usar body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,4 +27,3 @@ app.listen(port, () => {
     console.log('Server up and running!');
 
 });
-
